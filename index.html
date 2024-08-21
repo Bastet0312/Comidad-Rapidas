@@ -2,50 +2,109 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Donde el otro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title> Metal Food Rock </title>
+  <!-- Llamamos a nuestros estilos personalizados parta la CABECERA-->
+  <link rel="Stylesheet" href="/css/index-styles.css">
+  <!-- Llamamos a nuestros estilos personalizados para PIE DE PAGINA-->
+  <link rel="Stylesheet" href="/css/piepagina-styles.css">
+  <!-- Llamamos a nuestros estilos personalizados para el carrusel-->
+  <link rel="Stylesheet" href="/css/carrusel.css">
+
+  <!-- Llamamos a nuestros estilos personalizados para el formulario de registro-->
+  <link rel="Stylesheet" href="/css/formulario.css">
+
 </head>
 
 <body>
+  <!-- importar cabecera con el menu-->
+  <div id="cabecera-menu"></div>
 
-    <!-- Crearemos la cabecera de la pagina -->
-    <div class="row">
-        <!-- Columna en blanco -->
+  <!-- Carousel -->
+  <div id="demo" class="tamaño-imagenes caja-carrusel carousel slide" data-bs-ride="carousel">
 
-        <div class="col -sm-1">Logo</div>
-        <!-- incertamos un logo-->
-
-        <div class="col -sm-1"></div>
-        <!-- Aqui titulo de la pagina -->
-
-        <div class="col-sm-4">Titulo</div>
-        <!-- espacio en blanco -->
-
-        <div class="col-sm-1"></div>
-
-        <!-- espacio para el menu-->
-
-        <div class="col-sm-1">Menu</div>
-
-        <!-- espacio para los icono -->
-
-        <div class="col-sm-1">Icono</div>
-
-        <!-- espacio en blanco -->
-
-        <div class="col-sm-1"></div>
-
-
-
-
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
     </div>
 
+    <!-- The slideshow/carousel -->
+    <div class=" carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/img/comida3.jpg " alt="Los Angeles" class="  d-block style=" width:00.1;">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/img/comida1.jpg" alt="Chicago" class="d-block w-00.1">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/img/comida2.jpg" alt="New York" class="d-block w-00.1">
+      </div>
     </div>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- formulario-->
+  <h2>Registro de usuarios</h2>
+
+  <form action="/ruta-a-tu-servidor" method="post">
+    <!-- Nombre -->
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <!-- Correo electrónico -->
+    <label for="email">Correo Electrónico:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Contraseña -->
+    <label for="password">Contraseña:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <!-- Confirmar Contraseña -->
+    <label for="confirm-password">Confirmar Contraseña:</label><br>
+    <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+
+    <!-- Género -->
+    <label for="genero">Género:</label><br>
+    <select id="genero" name="genero" required>
+      <option value="">Selecciona tu género</option>
+      <option value="masculino">Masculino</option>
+      <option value="femenino">Femenino</option>
+      <option value="otro">Otro</option>
+    </select><br><br>
+
+    <!-- Fecha de Nacimiento -->
+    <label for="fecha-nacimiento">Fecha de Nacimiento:</label><br>
+    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required><br><br>
+
+    <!-- Aceptar términos y condiciones -->
+    <input type="checkbox" id="terminos" name="terminos" required>
+    <label for="terminos">Acepto los términos y condiciones</label><br><br>
+
+    <!-- Botón de envío -->
+    <input type="submit" value="Registrarse">
+  </form>
+
+  <!-- Llamar archivos java script-->
+  <div id="pie-pagina-menu"></div>
+
+  <script src="/js/index-scrip.js"></script>
+  <!-- Llamar al pie de pagina-->
+  <script src="/js/pie-pagina.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
