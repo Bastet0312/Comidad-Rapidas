@@ -1,13 +1,7 @@
 .caja-carrusel {
-  margin-top: 20px;
-  margin-left: 40px;
-  width: 20%;
+  margin-top: 40px;
+  margin-left: 40%;
+  width: 25%;
   border: 1px solid#333;
   box-shadow: 10px 10px 10px #333;
-}
-
-.tamaño-imagen {
-  width: 20%x;
-  height: 20%;
-
 }
